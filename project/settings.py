@@ -25,8 +25,8 @@ DEBUG = env.bool('DEBUG', False)
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = list(env("ALLOWED_HOSTS", ['*']))
-
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", ['*'])
+print(ALLOWED_HOSTS)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES = [
